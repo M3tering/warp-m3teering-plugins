@@ -1,0 +1,63 @@
+{
+  "name": "warp-m3tering-plugin-stablelib",
+  "version": "1.0.0",
+  "description": "Stablelib plugin for Warp contracts",
+  "author": "ichristwin",
+  "types": "./lib/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/cjs/index.js",
+      "require": "./lib/cjs/index.js",
+      "types": "./lib/types/index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16.5"
+  },
+  "scripts": {
+    "build:cjs": "tsc -b tsconfig.json",
+    "build:types": "tsc -b tsconfig.types.json",
+    "build": "yarn run clean && yarn build:cjs && yarn build:types",
+    "format": "prettier --write 'src/**/*.ts'",
+    "clean": "rimraf ./lib",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prettier:format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prepublishOnly": "yarn lint:fix",
+    "preversion": "yarn lint && yarn build",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push origin HEAD && git push --tags",
+    "yalc:publish": "yarn build && yalc publish --push",
+    "test": "jest",
+    "test:unit": "jest ./src/__tests__/unit"
+  },
+  "license": "MIT",
+  "files": [
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "jest": "*",
+    "prettier": "*",
+    "rimraf": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "peerDependencies": {
+    "warp-contracts": "*"
+  },
+  "dependencies": {
+    "@stablelib/ed25519": "^1.0.3",
+    "warp-contracts": "^1.4.38"
+  }
+}
