@@ -18,7 +18,7 @@ import { WarpFactory } from "warp-contracts";
 import { Ed25519Extension } from "warp-m3tering-plugin-ed25519";
 import { EthersExtension } from "warp-m3tering-plugin-ethers";
 
-const warp = WarpFactory.forMainnet().use(new FetchExtension());
+const warp = WarpFactory.forMainnet().use(new EthersExtension());
 ```
 
 You can cascade the plugins (use multiple plugins) like this,

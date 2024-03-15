@@ -1,7 +1,7 @@
 {
-  "name": "warp-m3tering-plugin-stablelib",
+  "name": "warp-m3tering-plugin-ed25519",
   "version": "1.0.0",
-  "description": "Stablelib plugin for Warp contracts",
+  "description": "@stablelib/ed25519 plugin for Warp contracts",
   "author": "ichristwin",
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
