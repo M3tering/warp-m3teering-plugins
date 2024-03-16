@@ -1,6 +1,6 @@
 {
-  "name": "warp-m3tering-plugin-ed25519",
-  "version": "1.0.0",
+  "name": "m3tering-ed25519",
+  "version": "1.0.1",
   "description": "@stablelib/ed25519 plugin for Warp contracts",
   "author": "ichristwin",
   "types": "./lib/types/index.d.ts",
