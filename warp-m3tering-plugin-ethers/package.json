@@ -1,6 +1,6 @@
 {
-  "name": "warp-m3tering-plugin-ethers",
-  "version": "1.0.0",
+  "name": "m3tering-ethers",
+  "version": "1.0.1",
   "description": "Ethers plugin for Warp M3tering",
   "author": "ichristwin",
   "license": "MIT",
