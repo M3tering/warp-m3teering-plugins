@@ -1,9 +1,8 @@
 {
-  "name": "m3tering-ethers",
-  "version": "1.0.1",
-  "description": "Ethers plugin for Warp M3tering",
+  "name": "m3tering-ed25519",
+  "version": "1.0.2",
+  "description": "@stablelib/ed25519 plugin for Warp contracts",
   "author": "ichristwin",
-  "license": "MIT",
   "types": "./lib/types/index.d.ts",
   "main": "./lib/cjs/index.js",
   "exports": {
@@ -34,6 +33,7 @@
     "test": "jest",
     "test:unit": "jest ./src/__tests__/unit"
   },
+  "license": "MIT",
   "files": [
     "lib/",
     "LICENSE",
@@ -54,9 +54,10 @@
     "typescript": "*"
   },
   "peerDependencies": {
-    "warp-contracts": "^1.4.38"
+    "warp-contracts": "^1.4.41"
   },
   "dependencies": {
-    "ethers": "^6.11.1"
+    "@stablelib/ed25519": "^1.0.3",
+    "warp-contracts": "^1.4.41"
   }
 }

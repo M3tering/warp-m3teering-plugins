@@ -1,11 +1,11 @@
 {
   "private": true,
   "workspaces": [
-    "warp-m3tering-plugin-ed25519",
-    "warp-m3tering-plugin-ethers"
+    "m3tering-ed25519",
+    "m3tering-ethers"
   ],
   "dependencies": {
-    "warp-contracts": "1.4.x"
+    "warp-contracts": "^1.4.41"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",
