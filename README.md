@@ -5,8 +5,8 @@ This is a monorepo that includes all the M3tering custom warp plugins and exampl
 ## Installation
 
 ```bash
-yarn add warp-m3tering-plugin-ed25519
-yarn add warp-m3tering-plugin-ethers
+yarn add m3tering-ed25519
+yarn add m3tering-ethers
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ All you need to do is import the plugin as you normally do with packages install
 
 ```js
 import { WarpFactory } from "warp-contracts";
-import { Ed25519Extension } from "warp-m3tering-plugin-ed25519";
-import { EthersExtension } from "warp-m3tering-plugin-ethers";
+import { EthersExtension } from "m3tering-ethers";
+import { Ed25519Extension } from "m3tering-ed25519";
 
 const warp = WarpFactory.forMainnet().use(new EthersExtension());
 ```
